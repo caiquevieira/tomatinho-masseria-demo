@@ -1,0 +1,25 @@
+/* Fontes autohospedadas (subconjunto latin), sem CDN de terceiros.
+   Arquivo à parte do input.css para que o caminho ../fonts/ funcione no dev (CSS inline) e no build. */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/fraunces.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/fraunces-italico.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/dm-sans.woff2") format("woff2");
+}
