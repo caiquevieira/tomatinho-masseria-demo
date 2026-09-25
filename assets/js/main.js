@@ -140,6 +140,29 @@ function iniciarGaleria() {
   });
 }
 
+/* Pop-up de escolha de unidade: os botões genéricos de WhatsApp (data-abrir-unidades) abrem o <dialog>.
+   Sem JS ou sem suporte a <dialog>, o href="#unidades" leva à seção com os três botões. */
+function iniciarSeletorUnidade() {
+  const dialogo = document.getElementById('seletor-unidade');
+  if (!dialogo || typeof dialogo.showModal !== 'function') return;
+
+  document.querySelectorAll('[data-abrir-unidades]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      dialogo.showModal();
+    });
+  });
+
+  dialogo.querySelectorAll('[data-fechar-seletor]').forEach((b) => b.addEventListener('click', () => dialogo.close()));
+  // Clique no fundo escurecido fecha; clique dentro do conteúdo não.
+  dialogo.addEventListener('click', (e) => {
+    if (e.target === dialogo) dialogo.close();
+  });
+  // Escolheu uma unidade: o WhatsApp abre em outra aba, então fecha o pop-up.
+  dialogo.querySelectorAll('a[href]').forEach((a) => a.addEventListener('click', () => dialogo.close()));
+}
+
 iniciarConsentimento();
+iniciarSeletorUnidade();
 iniciarTracking();
 iniciarGaleria();
