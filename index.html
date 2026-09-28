@@ -28,8 +28,8 @@
   <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fontes.css">
-  <link rel="stylesheet" href="assets/css/styles.css?v=202609281151">
-  <script src="assets/js/main.js?v=202609281151" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=202609281156">
+  <script src="assets/js/main.js?v=202609281156" defer></script>
 
   <!-- Três unidades: um Store por unidade. Vila Leopoldina sem coordenadas (pendente no briefing). Perdizes abre também às segundas (Google; confirmar). -->
   <script type="application/ld+json">
@@ -409,21 +409,23 @@
     <h2 id="depoimentos-titulo" class="text-4xl font-semibold leading-tight md:text-5xl">Quem já pediu, <em class="font-normal text-marca">recomenda</em></h2>
     <p class="mt-4 text-texto-suave">Avaliações de clientes no Google, nas 3 unidades.</p>
 
-    <ul class="mt-6 flex flex-wrap gap-x-8 gap-y-3" aria-label="Nota no Google por unidade">
-      <li class="inline-flex items-center gap-2 font-semibold">
-        <svg width="18" height="18" class="text-massa" aria-hidden="true"><use href="#estrela"/></svg>
-        Vila Leopoldina <span class="font-normal text-texto-suave">4,9 · 164 avaliações</span>
+    <ul class="mt-6 grid gap-6 sm:grid-cols-3" aria-label="Nota no Google por unidade">
+      <li class="flex items-center gap-2 font-semibold">
+        <svg width="18" height="18" class="shrink-0 text-massa" aria-hidden="true"><use href="#estrela"/></svg>
+        <span>Vila Leopoldina<br><span class="font-normal text-texto-suave">4,9 · 164 avaliações</span></span>
       </li>
-      <li class="inline-flex items-center gap-2 font-semibold">
-        <svg width="18" height="18" class="text-massa" aria-hidden="true"><use href="#estrela"/></svg>
-        Cidade São Francisco <span class="font-normal text-texto-suave">5,0 · 86 avaliações</span>
+      <li class="flex items-center gap-2 font-semibold">
+        <svg width="18" height="18" class="shrink-0 text-massa" aria-hidden="true"><use href="#estrela"/></svg>
+        <span>Cidade São Francisco<br><span class="font-normal text-texto-suave">5,0 · 86 avaliações</span></span>
       </li>
-      <li class="inline-flex items-center gap-2 font-semibold">
-        <svg width="18" height="18" class="text-massa" aria-hidden="true"><use href="#estrela"/></svg>
-        Perdizes <span class="font-normal text-texto-suave">4,9 · 111 avaliações</span>
+      <li class="flex items-center gap-2 font-semibold">
+        <svg width="18" height="18" class="shrink-0 text-massa" aria-hidden="true"><use href="#estrela"/></svg>
+        <span>Perdizes<br><span class="font-normal text-texto-suave">4,9 · 111 avaliações</span></span>
       </li>
     </ul>
 
+    <!-- As 3 avaliações abaixo são todas da unidade Cidade São Francisco (única com dados completos, ver briefing.md seção 8);
+         por isso cada card informa a unidade, em vez de alinhar 1:1 com os 3 cards de nota acima. -->
     <ul class="mt-10 grid gap-6 md:grid-cols-3">
       <li>
         <figure class="flex h-full flex-col rounded-marca bg-fundo p-6">
@@ -431,7 +433,7 @@
           <blockquote class="mt-4 grow font-titulo text-xl leading-snug">
             <p>É uma delícia! Eu adorei! Tem muita opção de sabores e molhos. A porção é muito bem servida e o atendimento é ótimo.</p>
           </blockquote>
-          <figcaption class="mt-5 text-sm"><strong>Eidí Lima</strong><br><span class="text-texto-suave">Avaliação no Google</span></figcaption>
+          <figcaption class="mt-5 text-sm"><strong>Eidí Lima</strong><br><span class="text-texto-suave">Cidade São Francisco · Avaliação no Google</span></figcaption>
         </figure>
       </li>
       <li>
@@ -440,7 +442,7 @@
           <blockquote class="mt-4 grow font-titulo text-xl leading-snug">
             <p>A massa deles é maravilhosa, o molho é muito saboroso e o atendimento é incrível! Pode pedir sem medo. Amei a experiência!!</p>
           </blockquote>
-          <figcaption class="mt-5 text-sm"><strong>Juliana Feitosa</strong><br><span class="text-texto-suave">Avaliação no Google</span></figcaption>
+          <figcaption class="mt-5 text-sm"><strong>Juliana Feitosa</strong><br><span class="text-texto-suave">Cidade São Francisco · Avaliação no Google</span></figcaption>
         </figure>
       </li>
       <li>
@@ -449,7 +451,7 @@
           <blockquote class="mt-4 grow font-titulo text-xl leading-snug">
             <p>Foi excelente, o atendimento da Bianca foi tranquilo e esclarecedor. O ambiente claro e aconchegante. E a refeição saborosa.</p>
           </blockquote>
-          <figcaption class="mt-5 text-sm"><strong>Telma Cesar</strong><br><span class="text-texto-suave">Avaliação no Google</span></figcaption>
+          <figcaption class="mt-5 text-sm"><strong>Telma Cesar</strong><br><span class="text-texto-suave">Cidade São Francisco · Avaliação no Google</span></figcaption>
         </figure>
       </li>
     </ul>
